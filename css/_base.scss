@@ -1,0 +1,52 @@
+/*
+  Base
+---------------------------------------------- */
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  font-family: “Times New Roman”, “游明朝”, “Yu Mincho”, “游明朝体”, “YuMincho”, 
+  “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, “HiraMinProN-W3”, “HGS明朝E”, 
+  “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #14171a;
+  letter-spacing: 0.05em;
+  background-color: #fafafa;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+strong {
+  font-weight: bold;
+}
+
+input,
+textarea {
+  max-width: 100%;
+  font-family: inherit;
+  font-size: 100%;
+}

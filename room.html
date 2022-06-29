@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <meta name="description" content="120文字以内">
+    <meta property="og:title" content="このページのタイトル">
+    <meta property="og:type" content="TOPページはwebsite、子ページはarticle">
+    <meta property="og:url" content="このページのURL">
+    <meta property="og:image" content="1200×630以上推奨、絶対パスで指定">
+    <meta property="og:site_name" content="サイト名">
+    <meta property="og:description" content="80〜90文字推奨">
+    <meta name="twitter:card" content="summary or summary_large_image">
+    <meta name="twitter:site" content="@ユーザー名">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" sizes="16x16" href="">
+    <link rel="apple-touch-icon" sizes="192x192" href="">
+    <link rel="shortcut icon" sizes="192x192" href="">
+    <meta name="last-modified" content="Sun, 29 Dec 2019 20:30:30 GMT">
+
+    <!-- パンくず対応 -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TOP",
+            "item": "https://smple.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "トップス",
+            "item": "https://smple.com/tops/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Tシャツ",
+            "item": "https://smple.com/tops/tshirt/"
+          }
+        ]
+      }
+      </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="css/swiper/swiper-bundle.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+<body id="subPage">
+  <div class="modal__bg"></div>
+  <header class="header sub_header">
+    <div class="header__nav">
+      <a href="index.html">
+        <h1 class="header__logo"></h1>
+      </a>
+      <div class="pc_nav">
+        <nav>
+          <ul class="nav_menu">
+            <li><a href="room.html">お部屋</a></li>
+            <li><a href="menu.html">お料理</a></li>
+            <li><a href="onsen.html">温泉</a></li>
+          </ul>
+        </nav>
+        <div class="header__btn">
+          <a href="#" class="btn">宿泊予約</a>
+        </div>
+      </div>
+      <div class="sp_nav">
+        <div class="sp_nav__logo">
+          <img src="image/top-header-logo@2x.png" alt="">
+        </div>
+        <nav>
+          <ul class="sp_nav__menu">
+            <li><a href="room.html">お部屋</a></li>
+            <li><a href="menu.html">お料理</a></li>
+            <li><a href="onsen.html">温泉</a></li>
+          </ul>
+        </nav>
+        <div class="header__btn">
+          <a href="#" class="btn">宿泊予約</a>
+        </div>
+      </div>
+      <!-- ハンバーガー -->
+      <div class="sp_hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <div id="modal" class="modal">
+    <div class="modal__close">
+      <img src="image/close.png" alt="閉じるボタン">
+    </div>
+    <div class="modal__ttl">宿泊予約</div>
+    <form class="form" action="">
+      <div class="form__item">
+        <label for="name">お名前</label>
+        <input type="text" id="name" name="name" placeholder="例:石井正悟" required>
+      </div>
+      <div class="form__item">
+        <label for="email">メールアドレス</label>
+        <input type="email" id="email" name="email" placeholder="例:Example@example.com" required>
+      </div>
+      <div class="form__item">
+        <label for="paln">ご希望プラン（空いているプランのみ表示されます）</label>
+        <select name="plan" id="plan" placeholder="プランを選択してください">
+          <option value="" disabled selected style="display:none;">選択してください</option>
+          <option value="">【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
+          <option value="">平日に優雅に楽しむ、特別宿泊プラン</option>
+          <option value="">絶景貸切露天と個室会席を満喫できるファミリープラン</option>
+        </select>
+      </div>
+      <div class="form__item">
+        <label for="date">日付選択</label>
+        <input type="text" name="datepicker" id="js-datepicker">
+      </div>
+      <div class="form__item taC">
+        <button type="submit" class="form__btn">送信する</button>
+      </div>
+    </form>
+  </div>
+
+  <main>
+    <div class="fv">
+      <img src="image/oheya-header.png" alt="お部屋">
+      <div class="fv__txt">
+        <p>お部屋</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="bread">
+        <ul>
+          <li>トップ</li>
+          <li>お部屋</li>
+        </ul>
+      </div>
+      <div class="desc" data-aos="fade-up">
+        <p>創業より受け継がれてきた石井花壇の和の造り<br>温海の雄大な絶景を堪能していただけるように設計された客室<br>ゆるやかに流れ行く時間に身を委ねて</p>
+      </div>
+      <section class="subPage_intro d-flex row_reverse" data-aos="fade-up">
+        <div class="subPage_intro__txt">
+          <h2 class="section_ttl">温泉付き客室</h2>
+          <p class="section_txt">温海の源泉かけ流し露天風呂付き客室になります。<br>あなただけの上質な安らぎのひとときを。</p>
+          <ul class="section_list">
+            <li>＊部屋数に限りがございます。</li>
+            <li>＊洗い場はないため、お体を先に大浴場でお流しになって頂く必要があります。</li>
+          </ul>
+        </div>
+        <div class="subPage_intro__img">
+          <img src="image/oheya01.jpg" alt="">
+        </div>
+      </section>
+      <section class="subPage_intro d-flex row_normal" data-aos="fade-up">
+        <div class="subPage_intro__txt">
+          <h2 class="section_ttl">温泉付き客室</h2>
+          <p class="section_txt">温海の源泉かけ流し露天風呂付き客室になります。<br>あなただけの上質な安らぎのひとときを。</p>
+          <ul class="section_list">
+            <li>＊部屋数に限りがございます。</li>
+            <li>＊洗い場はないため、お体を先に大浴場でお流しになって頂く必要があります。</li>
+          </ul>
+        </div>
+        <div class="subPage_intro__img">
+          <img src="image/oheya02.jpg" alt="">
+        </div>
+      </section>
+      <section class="subPage_intro d-flex row_reverse" data-aos="fade-up">
+        <div class="subPage_intro__txt">
+          <h2 class="section_ttl">温泉付き客室</h2>
+          <p class="section_txt">温海の源泉かけ流し露天風呂付き客室になります。<br>あなただけの上質な安らぎのひとときを。</p>
+          <ul class="section_list">
+            <li>＊部屋数に限りがございます。</li>
+            <li>＊洗い場はないため、お体を先に大浴場でお流しになって頂く必要があります。</li>
+          </ul>
+        </div>
+        <div class="subPage_intro__img">
+          <img src="image/oheya03.jpg" alt="">
+        </div>
+      </section>
+    </div>
+    
+    <footer class="footer">
+      <div class="container">
+        <ul class="footer__menu">
+          <li><a href="room.html">お部屋</a></li>
+          <li><a href="menu.html">お料理</a></li>
+          <li><a href="onsen.html">温泉</a></li>
+        </ul>
+        <div class="footer__logo">
+          <img src="image/footer-logo@2x.png" alt="フッターロゴ">
+        </div>
+        <div class="footer__address">
+          <p><span>〒000-0000</span>山形県鶴岡市xxxxxxxxxxx</p>
+          <p><span>TEL.000-0000-0000</span>FAX.00-0000-0000</p>
+        </div>
+      </div>
+      <div class="copy_right"><small>Copyright © 石井花壇 All Rights Reserved.</small></div>
+    </footer>
+
+
+  </main>
+  
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- swiper.js -->
+  <!-- <script src="js/swiper/swiper-bundle.min.js.map"></script> -->
+  <script src="js/swiper/swiper-bundle.min.js"></script>
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- local js -->
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+/*変数宣言*/
+$pc-large: 1440px; // PC
+$pc: 1024px; // PC
+$ipad: 768px;
+$tab: 767px; // タブレット
+$sp: 480px;  // スマホ
+
+@mixin pc-large {
+  @media (max-width: ($pc-large)) {
+    @content;
+  }
+}
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin ipad {
+  @media (max-width: ($ipad)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
