@@ -360,6 +360,9 @@ textarea {
   position: inherit;
   color: #000;
 }
+.header.sub_header .header__nav {
+  position: relative;
+}
 .header.sub_header .header__logo {
   width: 200px;
   height: 40px;
@@ -370,6 +373,13 @@ textarea {
   .header.sub_header .header__logo {
     max-width: 150px;
   }
+}
+.header.sub_header .sp_hamburger {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
 }
 .header .pc_nav {
   display: -webkit-box;
@@ -641,6 +651,21 @@ textarea {
   font-size: 16px;
   padding: 13px 67px;
   border: 1px solid #707070;
+  color: #000;
+}
+@media (max-width: 767px) {
+  .modal {
+    padding: 20px;
+  }
+  .modal .modal__ttl {
+    margin-bottom: 3.9%;
+  }
+  .modal .form {
+    padding-top: 4.69%;
+  }
+  .modal .form__btn {
+    margin-top: 20px;
+  }
 }
 
 @-webkit-keyframes fadeIn {
@@ -1137,6 +1162,12 @@ textarea {
 /*--------------------------------
 	　room.html, menu.html
 --------------------------------*/
+#subPage .header.fixed_white {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 #subPage .container {
   max-width: 1180px;
   margin: 0 auto;
@@ -1201,6 +1232,12 @@ textarea {
   #subPage .desc {
     text-align: left;
   }
+}
+#subPage .sp_hamburger span {
+  background-color: #000;
+}
+#subPage .sp_hamburger.open span {
+  background-color: #fff;
 }
 #subPage .fv img {
   width: 100%;

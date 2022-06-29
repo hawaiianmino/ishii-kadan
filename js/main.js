@@ -67,8 +67,10 @@ $(function() {
     var scroll = $(window).scrollTop();
     if(scroll >= headerH) {
       $('.header:not(.sub_header)').addClass('fixed');
+      $('.sub_header').addClass('fixed_white')
     }else {
       $('.header').removeClass('fixed');
+      $('.sub_header').removeClass('fixed_white');
     }
   }
 

@@ -170,6 +170,9 @@
   &.sub_header {
     position: inherit;
     color: #000;
+    .header__nav {
+      position: relative;
+    }
     .header__logo {
       width: 200px;
       height: 40px;
@@ -178,6 +181,12 @@
       @include tab {
         max-width: 150px;
       }
+    }
+    .sp_hamburger {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
     }
   }
   .pc_nav {
@@ -249,6 +258,7 @@
       }
     }
   }
+
   
   // ハンバーガーメニュー
   .sp_hamburger{
@@ -414,8 +424,21 @@
       font-size: 16px;
       padding: 13px 67px;
       border: 1px solid #707070;
+      color: #000;
     }
-  } 
+  }
+  @include tab {
+    padding: 20px;
+    .modal__ttl {
+      margin-bottom: 3.9%;
+    }
+    .form {
+      padding-top: 4.69%;
+      &__btn {
+        margin-top: 20px;
+      }
+    }
+  }
 }
 @keyframes fadeIn {
   0% {
@@ -830,6 +853,14 @@
 	　room.html, menu.html
 --------------------------------*/
 #subPage {
+  .header {
+    &.fixed_white {
+      background-color: #fff;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+  }
   .container {
     max-width: 1180px;
     margin: 0 auto;
@@ -884,6 +915,17 @@
     padding-right: 20px;
     @media (max-width: 767px) {
       text-align: left;
+    }
+  }
+  //ハンバーガー
+  .sp_hamburger {
+    span {
+      background-color: #000;
+    }
+    &.open {
+      span {
+        background-color: #fff;
+      }
     }
   }
   // fv
