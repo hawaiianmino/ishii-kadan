@@ -7,9 +7,6 @@
 /*--------------------------------
 	　共通スタイル
 --------------------------------*/
-body,html {
-  width: 100%;
-}
 .taC {
   text-align: center;
 }
@@ -527,6 +524,7 @@ body,html {
     &__txt {
       font-size: 15px;
       line-height: 1.5;
+      right: 40%;
     }
   }
 }
