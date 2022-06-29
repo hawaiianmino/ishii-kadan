@@ -694,6 +694,11 @@ textarea {
           transform: translateY(-50%);
   z-index: 10;
 }
+@media (max-width: 767px) {
+  .fv__txt {
+    right: 25%;
+  }
+}
 .fv__txt p {
   font-size: 34px;
   color: #fff;
@@ -785,7 +790,6 @@ textarea {
   .lead__txt {
     font-size: 15px;
     line-height: 1.5;
-    right: 40%;
   }
 }
 
