@@ -309,13 +309,14 @@ textarea {
             flex: 1;
   }
 }
+@media (max-width: 768px) {
+  .section_ttl {
+    font-size: 20px;
+  }
+}
 @media (max-width: 767px) {
   .section_txt_box {
     padding: 20px;
-  }
-
-  .section_ttl {
-    font-size: 20px;
   }
 
   .section_img {
@@ -598,6 +599,7 @@ textarea {
   z-index: 999;
   width: 90%;
   max-width: 550px;
+  max-height: 80vh;
   background-color: #fff;
   position: fixed;
   top: 50%;
@@ -644,6 +646,9 @@ textarea {
      -moz-appearance: none;
           appearance: none;
   border: 1px solid #e7e7e7;
+  background: #fff;
+  color: #000;
+  border-radius: 5px;
 }
 .modal .form {
   padding-top: 35px;
@@ -1211,6 +1216,7 @@ textarea {
 @media (max-width: 768px) {
   #subPage .section_ttl {
     margin-bottom: 24px;
+    font-size: 20px;
   }
 }
 #subPage .section_txt {
