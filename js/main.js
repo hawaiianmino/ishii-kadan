@@ -21,7 +21,7 @@ $(function() {
 
 
   // タブ切り替え
-  $tabList = $('.tab li');
+  $tabList = $('.tab li span');
   $tabList.on('click', function() {
     var index = $tabList.index(this);
     $tabList.removeClass('active');

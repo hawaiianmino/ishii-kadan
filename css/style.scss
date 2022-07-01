@@ -10,7 +10,9 @@
 .taC {
   text-align: center;
 }
-
+.fwB {
+  font-weight: bold;
+}
 .section_ttl {
   font-size: 1.87vw;
   font-weight: 400;
@@ -20,17 +22,20 @@
     white-space: nowrap;
   }
   &.--icon {
-    margin-bottom: 3.4vw;
+    margin-bottom: 5%;
     &::before {
       content: '';
       background: url(../image/logo02@2x.png) no-repeat center / contain;
       display: block;
       width: 40px;
       height: 40px;
-      margin: 0 auto 20px;
+      margin: 0 auto 13px;
     }
   }
   
+}
+.section_txt {
+  line-height: 1.9;
 }
 .section_img {
   margin-right: calc((137 / 1920) * 100%);
@@ -56,15 +61,23 @@
   &.row_reverse {
     flex-direction: row-reverse;
     justify-content: left;
+    align-items: flex-start;
     .section_txt_box {
       padding-right: 20px;
+    }
+    @include ipad {
+      align-items: center;
     }
   }
   &.row_normal {
     justify-content: right;
+    align-items: flex-start;
     .section_img {
       margin-right: initial;
-      margin-left: calc((137 / 1920) * 100%);
+      margin-left: 8.3%;
+    }
+    @include ipad {
+      align-items: center;
     }
     .section_txt_box {
       margin-right: initial;
@@ -76,16 +89,16 @@
 }
 
 .mb75 {
-  margin-bottom:  3.9vw;
+  margin-bottom:  3.6vw;
 }
 .btn {
-  max-width: 210px;
+  max-width: 200px;
   position: relative;
   overflow: hidden;
   transition: ease .2s;
   &__link {
     display: block;
-    padding: 1.25em 2.75em;
+    padding: .95em;
     border: 1px solid #000;
     text-align: center;
     position: relative;
@@ -133,6 +146,9 @@
   .section_ttl {
     font-size: 20px;
   }
+  .pc {
+    display: none;
+  }
 }
 @include tab {
   .section_txt_box {
@@ -151,9 +167,6 @@
         margin-left: initial;
       }
     }
-  }
-  .pc {
-    display: none;
   }
 }
 
@@ -486,10 +499,11 @@
 
   &__txt {
     position: absolute;
-    top: 50%;
-    right: 20%;
+    top: 47%;
+    right: 25%;
     transform: translateY(-50%);
     z-index: 10;
+    line-height: 2.5;
     @include tab {
       right: 25%;
     }
@@ -498,7 +512,7 @@
       color: #fff;
       writing-mode: vertical-rl;
       font-weight: bold;
-      letter-spacing: .3em;
+      letter-spacing: .25em;
     }
   }
 }
@@ -520,37 +534,40 @@
 // lead
 .lead {
   padding-top: 64px;
-  padding-bottom: 90px;
+  padding-bottom: 86px;
   background: url(../image/bg.png) repeat center / cover;
   &__ttl {
     font-size: 28px;
     font-weight: normal;
+    letter-spacing: 0.5em;
+    line-height: 2;
+    // margin-left: 4.8vw;
   }
   .indent {
-    padding-top: 2em;
+    padding-top: 3em;
     // text-indent: 1em;
   }
   &__txt {
     writing-mode: vertical-rl;
     text-orientation: upright;
+    margin: 0 23.8% 0 auto;
     width: 100%;
-    max-width: 860px;
-    min-height: 550px;
-    padding-left: 20px;
-    padding-right: 20px;
-    // max-width: calc((860 / 1920) * 100%);
-    margin: 0 auto;
+    max-width: 916px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    letter-spacing: .5em;
-    line-height: 2;
+    padding-right: 20px;
+    padding-left: 20px;
     .pt_3em {
-      padding-top: 3em;
+      padding-top: 5.3em;
+      letter-spacing: .4em;
+      line-height: 2.4;
     }
     .shop_name {
-      text-align: end;
+      text-align: center;
       font-size: 22px;
+      margin-top: 16.2em;
+      letter-spacing: .5em;
     }
   }
   @include tab {
@@ -571,13 +588,31 @@
   @include tab {
     padding-top: 80px;
   }
+  .section_ttl {
+    margin-top: 1vw;
+    line-height: 1.6;
+    margin-bottom: 3.1vw;
+  }
 }
 
-// foot
+// food
 .food {
   margin-top: 122px;
   @include tab {
     margin-top: 40px;
+  }
+  .section_ttl {
+    margin-top: 2vw;
+    line-height: 1.7;
+    margin-bottom: 18%;
+    @include ipad {
+    margin-top: 5%;
+    line-height: 1.6;
+    margin-bottom: 3.1vw;
+    }
+  }
+  .section_txt {
+    margin-bottom: 14%;
   }
 }
 
@@ -589,16 +624,21 @@
     margin-top: 40px;
     margin-bottom: 60px;
   }
+  .section_ttl {
+    margin-top: 4%;
+    line-height: 1.7;
+    margin-bottom: 12%;
+  }
 }
 
 // plan
 .plan {
   background: url(../image/bg02.png) no-repeat center / cover;
-  padding: 60px 20px 144px 20px;
+  padding: 56px 20px 144px 20px;
   padding-left: calc(50vw - 50%);
   padding-right: calc(50vw - 50%);
   .container {
-    max-width: 1180px;
+    max-width: 1220px;
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
@@ -606,8 +646,11 @@
   .card {
     display: flex;
     &__ttl {
-      padding-top: 1.66vw;
-      padding-bottom: 1.87vw;
+      font-size: 20px;
+      padding-top: 1.36vw;
+      padding-bottom: 0.77vw;
+      line-height: 1.7;
+      font-weight: normal;
     }
     &__item {
       width: 33.3333%;
@@ -633,6 +676,10 @@
         padding-top: 63.14%;
       }
     }
+    &__txt {
+      letter-spacing: 0;
+      line-height: 1.9;
+    }
   }
   @include tab {
     padding-bottom: 60px;
@@ -644,6 +691,7 @@
       }
       &__ttl {
         padding: 20px 0;
+        font-size: 18px;
       }
     }
   }
@@ -651,23 +699,30 @@
 
 // info
 .info {
-  padding: 60px 20px 144px 20px;
-  max-width: 1180px;
+  padding: 60px 20px 60px 20px;
+  max-width: 1220px;
   margin: 0 auto;
   .section_ttl.--icon {
-    margin-bottom: 2.4vw;
+    margin-bottom: 1.7vw;
   }
   .tab {
     display: flex;
-    justify-content: center;
-    margin: 2.55vw auto;
+    justify-content: space-between;
+    margin: 0 auto 2.15vw;
     li {
-      text-align: centers;
-      &.active {
-        border-bottom: 1px solid #000;
-      }
+      text-align: center;
+      width: calc((100% - 46px) / 2);
       &:first-child {
         margin-right: 2.76%;
+        text-align: right;
+      }
+      &:nth-child(2) {
+        text-align: left;
+      }
+      span {
+        &.active {
+          border-bottom: 1px solid #000;
+        }
       }
     }
   }
@@ -693,14 +748,17 @@
       justify-content: space-between;
       flex-wrap: wrap;
       li {
-        width: calc((100% - 2.76%) / 2);
+        width: calc((100% - 46px) / 2);
         padding: 15px 10px;
         background-color: #f6f6f6;
         .d-flex {
           align-items: flex-start;
         }
         &:nth-of-type(n + 3) {
-          margin-top: 2.76%;
+          margin-top: 20px;
+        }
+        @include ipad {
+          width: calc((100% - 20px) / 2);
         }
       }
     }
@@ -708,7 +766,7 @@
       width: calc((103 / 570) * 100%);
       margin-right: calc((30 / 514) * 100%);
       position: relative;
-      min-width: 90px;
+      min-width: 103px;
       &::before {
         content: '';
         display: block;
@@ -753,21 +811,27 @@
   padding: 60px 20px 110px 20px;
   padding-left: calc(50vw - 50%);
   padding-right: calc(50vw - 50%);
-
+  .section_ttl {
+    &.--icon {
+      margin-bottom: 6.4%;
+    }
+  }
   .container {
-    max-width: 1180px;
+    max-width: 1220px;
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
   }
   &__img {
     width: calc((656 / 1180) * 100%);
-    margin-right: 4.3vw;
     position: relative;
     &::before {
       content: '';
       display: block;
       padding-top: 56.4%;
+    }
+    @include ipad {
+      width: 40%;
     }
     img {
       position: absolute;
@@ -781,14 +845,43 @@
   }
   &__txt {
     line-height: 2em;
-    flex: 1;
+    width: calc((447 / 1180) * 100%);
+    p:first-child {
+      margin-top: -1vw;
+    }
+    p:not(:last-child) {
+      margin-bottom: 0.3vw;
+    }
+    @include ipad {
+      width: 55%;
+    }
+    @include tab {
+      width: 100%;
+    }
   }
   &__wrap {
     display: flex;
     margin-bottom: 3.5vw;
+    justify-content: space-between;
+    align-items: center;
   }
   &__map {
     text-align: center;
+    position: relative;
+    max-width: 792px;
+    margin: 0 auto;
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 74.7%;
+    }
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
   @include tab {
     &__img {
@@ -815,21 +908,24 @@
       padding: 64px 0 61px;
     }
     &__menu {
-      margin: 0 auto 5vw;
+      margin: 0 auto 3.7vw;
       writing-mode: vertical-rl;
       font-size: 18px;
       letter-spacing: 1em;
+      li {
+        text-align: left;
+      }
       li:not(:last-child) {
         margin-left: 30px;
       }
     }
     &__logo {
       max-width: 145px;
-      margin: 0 auto 3.75vw;
+      margin: 0 auto 3.55vw;
     }
     &__address {
       p:first-of-type {
-        margin-bottom: 23px;
+        margin-bottom: 10px;
         @include tab {
           margin-bottom: 0;
         }
