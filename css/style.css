@@ -155,6 +155,10 @@ textarea {
   font-size: 100%;
 }
 
+.ffM {
+  font-family: “游明朝”, “Yu Mincho”, “游明朝体”, “YuMincho”, “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, “HiraMinProN-W3”, “HGS明朝E”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
+}
+
 /*変数宣言*/
 /*--------------------------------
 	　共通スタイル
@@ -765,6 +769,7 @@ textarea {
 @media (max-width: 767px) {
   .fv__txt {
     right: 25%;
+    line-height: 2;
   }
 }
 .fv__txt p {
@@ -775,6 +780,11 @@ textarea {
           writing-mode: vertical-rl;
   font-weight: bold;
   letter-spacing: 0.25em;
+}
+@media (max-width: 767px) {
+  .fv__txt p {
+    font-size: 28px;
+  }
 }
 
 @-webkit-keyframes zoom-in {
@@ -847,6 +857,16 @@ textarea {
   padding-top: 5.3em;
   letter-spacing: 0.4em;
   line-height: 2.4;
+}
+@media (max-width: 767px) {
+  .lead__txt .pt_3em {
+    line-height: 2;
+  }
+}
+@media (max-width: 480px) {
+  .lead__txt .pt_3em {
+    line-height: 1.5;
+  }
 }
 .lead__txt .shop_name {
   text-align: center;
@@ -1244,7 +1264,7 @@ textarea {
   padding: 64px 0 61px;
 }
 .footer__menu {
-  margin: 0 auto 3.7vw;
+  margin: 0 auto 4.2vw;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
@@ -1253,23 +1273,28 @@ textarea {
 }
 .footer__menu li {
   text-align: left;
+  letter-spacing: 0.8em;
 }
 .footer__menu li:not(:last-child) {
-  margin-left: 30px;
+  margin-left: 25px;
 }
 .footer__logo {
   max-width: 145px;
   margin: 0 auto 3.55vw;
 }
 .footer__address p:first-of-type {
-  margin-bottom: 10px;
+  margin-bottom: 17px;
 }
 @media (max-width: 767px) {
   .footer__address p:first-of-type {
     margin-bottom: 0;
   }
 }
+.footer__address p {
+  letter-spacing: 0.1em;
+}
 .footer__address span {
+  letter-spacing: 0;
   margin-right: 21px;
 }
 @media (max-width: 767px) {
@@ -1305,13 +1330,14 @@ textarea {
   left: 0;
 }
 #subPage .container {
-  max-width: 1180px;
+  max-width: 1220px;
   margin: 0 auto;
-}
-#subPage .bread {
-  margin-top: 36px;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 29px;
+}
+#subPage .bread {
+  margin-top: 32px;
 }
 #subPage .bread ul {
   display: -webkit-box;
@@ -1323,7 +1349,7 @@ textarea {
   position: relative;
 }
 #subPage .bread ul li:first-of-type {
-  margin-right: 20px;
+  margin-right: 18px;
 }
 #subPage .bread ul li:first-of-type::after {
   content: ">";
@@ -1336,7 +1362,7 @@ textarea {
 }
 #subPage .section_ttl {
   font-size: 24px;
-  margin-bottom: 52px;
+  margin-bottom: 2.1vw;
 }
 @media (max-width: 768px) {
   #subPage .section_ttl {
@@ -1345,7 +1371,7 @@ textarea {
   }
 }
 #subPage .section_txt {
-  margin-bottom: 52px;
+  margin-bottom: 2.1vw;
 }
 #subPage .section_txt.no_list {
   margin-bottom: 0;
@@ -1359,15 +1385,20 @@ textarea {
   font-size: 14px;
 }
 #subPage .desc {
+  font-size: 16px;
   text-align: center;
-  margin-top: 97px;
-  margin-bottom: 78px;
+  margin-top: 4.7vw;
+  margin-bottom: 3.7vw;
   padding-left: 20px;
   padding-right: 20px;
+  line-height: 1.9;
+  letter-spacing: 0;
 }
 @media (max-width: 767px) {
   #subPage .desc {
     text-align: left;
+    padding-left: 0;
+    padding-right: o;
   }
 }
 #subPage .sp_hamburger span {
@@ -1391,6 +1422,7 @@ textarea {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   left: 50%;
+  top: 50%;
   right: initial;
 }
 #subPage .fv__txt p {
@@ -1398,18 +1430,40 @@ textarea {
       -ms-writing-mode: initial;
           writing-mode: initial;
   text-align: center;
+  letter-spacing: 0;
+}
+@media (max-width: 768px) {
+  #subPage .fv__txt p {
+    font-size: 24px;
+    letter-spacing: 0.3em;
+  }
 }
 #subPage .subPage_intro {
-  margin-bottom: 135px;
+  margin-bottom: 141px;
 }
 #subPage .subPage_intro__img {
   width: 44.5%;
   z-index: 10;
+  position: relative;
+}
+#subPage .subPage_intro__img::before {
+  display: block;
+  content: "";
+  padding-top: 57.14%;
+}
+#subPage .subPage_intro__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #subPage .subPage_intro__txt {
   background: url("../image/bg05.png") no-repeat center/cover;
-  padding-top: 60px;
-  padding-bottom: 110px;
+  padding-top: 2.8vw;
+  padding-bottom: 105px;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
@@ -1417,6 +1471,7 @@ textarea {
   position: relative;
   top: 57px;
   width: 55.5%;
+  letter-spacing: 0;
 }
 @media (max-width: 768px) {
   #subPage .subPage_intro__txt {
@@ -1427,11 +1482,20 @@ textarea {
   margin-right: -157px;
   padding-right: 220px;
   padding-left: 60px;
+  padding-bottom: 4.6vw;
+}
+@media (max-width: 767px) {
+  #subPage .subPage_intro.row_normal .subPage_intro__txt {
+    margin-right: initial;
+  }
 }
 #subPage .subPage_intro.row_reverse .subPage_intro__txt {
   margin-left: -157px;
-  padding-left: 220px;
+  padding-left: 237px;
   padding-right: 60px;
+}
+#subPage .subPage_intro.row_reverse .subPage_intro__txt.padding_adjust {
+  padding-bottom: 6.8vw;
 }
 @media (max-width: 767px) {
   #subPage .subPage_intro {
@@ -1489,22 +1553,30 @@ textarea {
   #subPage .subPage_intro.row_reverse .subPage_intro__txt {
     margin-left: initial;
     width: calc(100% - 20px);
-    margin-left: 20px;
     margin-top: -20px;
     padding: 40px 20px 20px 20px;
   }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  #subPage .subPage_intro.row_reverse .subPage_intro__txt {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
   #subPage .subPage_intro.row_normal .subPage_intro__img {
     overflow: hidden;
-  }
-  #subPage .subPage_intro.row_normal .subPage_intro__img img {
-    position: relative;
-    right: -20px;
+    margin-right: -20px;
   }
   #subPage .subPage_intro.row_normal .subPage_intro__txt {
     margin-left: initial;
     width: 100%;
     margin-left: -20px;
-    padding: 40px 20px 20px 40px;
+    padding: 40px 20px 20px 20px;
     margin-top: -20px;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  #subPage .subPage_intro.row_normal .subPage_intro__txt {
+    margin-left: initial;
   }
 }/*# sourceMappingURL=style.css.map */

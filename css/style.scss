@@ -506,6 +506,7 @@
     line-height: 2.5;
     @include tab {
       right: 25%;
+      line-height: 2;
     }
     p {
       font-size: 34px;
@@ -513,6 +514,9 @@
       writing-mode: vertical-rl;
       font-weight: bold;
       letter-spacing: .25em;
+      @include tab {
+        font-size: 28px;
+      }
     }
   }
 }
@@ -562,6 +566,12 @@
       padding-top: 5.3em;
       letter-spacing: .4em;
       line-height: 2.4;
+      @include tab {
+        line-height: 2;
+      }
+      @include sp {
+        line-height: 1.5;
+      }
     }
     .shop_name {
       text-align: center;
@@ -908,15 +918,16 @@
       padding: 64px 0 61px;
     }
     &__menu {
-      margin: 0 auto 3.7vw;
+      margin: 0 auto 4.2vw;
       writing-mode: vertical-rl;
       font-size: 18px;
       letter-spacing: 1em;
       li {
         text-align: left;
+        letter-spacing: .8em;
       }
       li:not(:last-child) {
-        margin-left: 30px;
+        margin-left: 25px;
       }
     }
     &__logo {
@@ -925,12 +936,16 @@
     }
     &__address {
       p:first-of-type {
-        margin-bottom: 10px;
+        margin-bottom: 17px;
         @include tab {
           margin-bottom: 0;
         }
       }
+      p {
+        letter-spacing: .1em;
+      }
       span {
+        letter-spacing: 0;
         margin-right: 21px;
       }
       @include tab {
@@ -969,19 +984,21 @@
     }
   }
   .container {
-    max-width: 1180px;
+    max-width: 1220px;
     margin: 0 auto;
-  }
-  .bread {
-    margin-top: 36px;
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 29px;
+  }
+  .bread {
+    margin-top: 32px;
+
     ul {
       display: flex;
       li {
         position: relative;
         &:first-of-type{
-          margin-right: 20px;
+          margin-right: 18px;
           &::after {
             content: '>';
             display: inline-block;
@@ -996,14 +1013,14 @@
   }
   .section_ttl {
     font-size: 24px;
-    margin-bottom: 52px;
+    margin-bottom: 2.1vw;
     @include ipad {
       margin-bottom: 24px;
       font-size: 20px;
     }
   }
   .section_txt {
-    margin-bottom: 52px;
+    margin-bottom: 2.1vw;
     &.no_list {
       margin-bottom: 0;
     }
@@ -1013,16 +1030,24 @@
   }
   .section_list {
     font-size: 14px;
+    li {
+      // padding-left: 0.4rem;
+    }
   }
   // desc
   .desc {
+    font-size: 16px;
     text-align: center;
-    margin-top: 97px;
-    margin-bottom: 78px;
+    margin-top: 4.7vw;
+    margin-bottom: 3.7vw;
     padding-left: 20px;
     padding-right: 20px;
-    @media (max-width: 767px) {
+    line-height: 1.9;
+    letter-spacing: 0;
+    @include tab {
       text-align: left;
+      padding-left: 0;
+      padding-right: o;
     }
   }
   //ハンバーガー
@@ -1048,28 +1073,49 @@
     &__txt {
       transform: translate(-50%, -50%);
       left: 50%;
+      top: 50%;
       right: initial;
       p {
         writing-mode: initial;
         text-align: center;
+        letter-spacing: 0;
+        @include ipad {
+          font-size: 24px;
+          letter-spacing: .3em;
+        }
       }
     }
   }
   // subPage_intro
   .subPage_intro {
-    margin-bottom: 135px;
+    margin-bottom: 141px;
     &__img {
       width: 44.5%;
       z-index: 10;
+      position: relative;
+      &::before {
+        display: block;
+        content: '';
+        padding-top: 57.14%;
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
     &__txt {
       background: url('../image/bg05.png') no-repeat center / cover;
-      padding-top: 60px;
-      padding-bottom: 110px;
+      padding-top: 2.8vw;
+      padding-bottom: 105px;
       flex: 1;
       position: relative;
       top: 57px;
       width: 55.5%;
+      letter-spacing: 0;
       @include ipad {
         padding-bottom: 60px;
       }
@@ -1079,13 +1125,20 @@
         margin-right: -157px;
         padding-right: 220px;
         padding-left: 60px;
+        padding-bottom: 4.6vw;
+        @include tab {
+          margin-right: initial;
+        }
       }
     }
     &.row_reverse {
       .subPage_intro__txt {
         margin-left: -157px;
-        padding-left: 220px;
+        padding-left: 237px;
         padding-right: 60px;
+        &.padding_adjust {
+          padding-bottom: 6.8vw;
+        }
       }
     }
     @include tab {
@@ -1144,26 +1197,28 @@
         .subPage_intro__txt {
           margin-left: initial;
           width: calc(100% - 20px);
-          margin-left: 20px;
+          // margin-left: 20px;
           margin-top: -20px;
           padding: 40px 20px 20px 20px;
+          @include tab {
+            width: 100%;
+          }
         }
       }
       &.row_normal {
         .subPage_intro__img {
-          // margin-right: -20px;
           overflow: hidden;
-          img {
-            position: relative;
-            right: -20px;
-          }
+          margin-right: -20px;
         }
         .subPage_intro__txt {
           margin-left: initial;
           width: 100%;
           margin-left: -20px;
-          padding: 40px 20px 20px 40px;
+          padding: 40px 20px 20px 20px;
           margin-top: -20px;
+          @include tab {
+            margin-left: initial;
+          }
         }
       }
     }
