@@ -500,12 +500,11 @@
   &__txt {
     position: absolute;
     top: 47%;
-    right: 25%;
+    right: 15%;
     transform: translateY(-50%);
     z-index: 10;
     line-height: 2.5;
     @include tab {
-      right: 25%;
       line-height: 2;
     }
     p {
@@ -519,6 +518,11 @@
       }
     }
   }
+}
+_::-webkit-full-page-media,
+_:future,
+:root .fv__txt {
+  right: 35%;
 }
 @keyframes zoom-in {
   0% {
@@ -988,7 +992,7 @@
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 29px;
+    padding-bottom: 65px;
   }
   .bread {
     margin-top: 32px;
@@ -1125,7 +1129,7 @@
         margin-right: -157px;
         padding-right: 220px;
         padding-left: 60px;
-        padding-bottom: 4.6vw;
+        padding-bottom: 105px;
         @include tab {
           margin-right: initial;
         }
@@ -1136,9 +1140,7 @@
         margin-left: -157px;
         padding-left: 237px;
         padding-right: 60px;
-        &.padding_adjust {
-          padding-bottom: 6.8vw;
-        }
+        padding-bottom: 105px;
       }
     }
     @include tab {

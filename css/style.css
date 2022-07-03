@@ -760,7 +760,7 @@ textarea {
 .fv__txt {
   position: absolute;
   top: 47%;
-  right: 25%;
+  right: 15%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: 10;
@@ -768,7 +768,6 @@ textarea {
 }
 @media (max-width: 767px) {
   .fv__txt {
-    right: 25%;
     line-height: 2;
   }
 }
@@ -785,6 +784,12 @@ textarea {
   .fv__txt p {
     font-size: 28px;
   }
+}
+
+_::-webkit-full-page-media,
+_:future,
+:root .fv__txt {
+  right: 35%;
 }
 
 @-webkit-keyframes zoom-in {
@@ -1334,7 +1339,7 @@ textarea {
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 29px;
+  padding-bottom: 65px;
 }
 #subPage .bread {
   margin-top: 32px;
@@ -1482,7 +1487,7 @@ textarea {
   margin-right: -157px;
   padding-right: 220px;
   padding-left: 60px;
-  padding-bottom: 4.6vw;
+  padding-bottom: 105px;
 }
 @media (max-width: 767px) {
   #subPage .subPage_intro.row_normal .subPage_intro__txt {
@@ -1493,9 +1498,7 @@ textarea {
   margin-left: -157px;
   padding-left: 237px;
   padding-right: 60px;
-}
-#subPage .subPage_intro.row_reverse .subPage_intro__txt.padding_adjust {
-  padding-bottom: 6.8vw;
+  padding-bottom: 105px;
 }
 @media (max-width: 767px) {
   #subPage .subPage_intro {
