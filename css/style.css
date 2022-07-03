@@ -239,6 +239,11 @@ textarea {
       -ms-flex-align: start;
           align-items: flex-start;
 }
+@media (max-width: 767px) {
+  .d-flex.row_reverse .section_img {
+    margin-right: initial;
+  }
+}
 .d-flex.row_reverse .section_txt_box {
   padding-right: 20px;
 }
@@ -274,10 +279,6 @@ textarea {
 }
 .d-flex.row_normal .section_txt_box {
   margin-right: initial;
-  -webkit-box-flex: initial;
-  -webkit-flex: initial;
-      -ms-flex: initial;
-          flex: initial;
   width: initial;
   padding-left: 20px;
 }
@@ -857,6 +858,12 @@ _:future,
           justify-content: space-between;
   padding-right: 20px;
   padding-left: 20px;
+  min-height: 550px;
+}
+@media (max-width: 1440px) {
+  .lead__txt {
+    margin: 0 auto;
+  }
 }
 .lead__txt .pt_3em {
   padding-top: 5.3em;
@@ -868,9 +875,10 @@ _:future,
     line-height: 2;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 767px) and (max-width: 480px) {
   .lead__txt .pt_3em {
-    line-height: 1.5;
+    line-height: 1.4;
+    font-size: 14px;
   }
 }
 .lead__txt .shop_name {
@@ -879,11 +887,24 @@ _:future,
   margin-top: 16.2em;
   letter-spacing: 0.5em;
 }
+@media (max-width: 480px) {
+  .lead__txt .shop_name {
+    font-size: 20px;
+  }
+}
 @media (max-width: 767px) {
   .lead__ttl {
     font-size: 24px;
     line-height: 1.5;
   }
+}
+@media (max-width: 767px) and (max-width: 480px) {
+  .lead__ttl {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}
+@media (max-width: 767px) {
   .lead__txt {
     font-size: 15px;
     line-height: 1.5;
@@ -1339,7 +1360,7 @@ _:future,
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 65px;
+  padding-bottom: 90px;
 }
 #subPage .bread {
   margin-top: 32px;
@@ -1483,15 +1504,31 @@ _:future,
     padding-bottom: 60px;
   }
 }
+@media (max-width: 768px) {
+  #subPage .subPage_intro.row_normal {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
 #subPage .subPage_intro.row_normal .subPage_intro__txt {
   margin-right: -157px;
   padding-right: 220px;
   padding-left: 60px;
-  padding-bottom: 105px;
+  padding-bottom: 90px;
 }
 @media (max-width: 767px) {
   #subPage .subPage_intro.row_normal .subPage_intro__txt {
     margin-right: initial;
+  }
+}
+@media (max-width: 768px) {
+  #subPage .subPage_intro.row_reverse {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 #subPage .subPage_intro.row_reverse .subPage_intro__txt {
