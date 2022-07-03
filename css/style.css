@@ -761,7 +761,7 @@ textarea {
 .fv__txt {
   position: absolute;
   top: 47%;
-  right: 15%;
+  right: 25%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: 10;
@@ -912,7 +912,7 @@ _:future,
 }
 
 .room {
-  padding-top: 106px;
+  padding-top: 87px;
 }
 @media (max-width: 767px) {
   .room {
@@ -946,7 +946,7 @@ _:future,
   }
 }
 .food .section_txt {
-  margin-bottom: 14%;
+  margin-bottom: 3.6vw;
 }
 
 .onsen {
@@ -960,9 +960,9 @@ _:future,
   }
 }
 .onsen .section_ttl {
-  margin-top: 4%;
+  margin-top: 5%;
   line-height: 1.7;
-  margin-bottom: 12%;
+  margin-bottom: 3.1vw;
 }
 
 .plan {

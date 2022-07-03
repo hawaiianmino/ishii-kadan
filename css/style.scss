@@ -504,7 +504,7 @@
   &__txt {
     position: absolute;
     top: 47%;
-    right: 15%;
+    right: 25%;
     transform: translateY(-50%);
     z-index: 10;
     line-height: 2.5;
@@ -612,7 +612,7 @@ _:future,
 
 // room
 .room {
-  padding-top: 106px;
+  padding-top: 87px;
   @include tab {
     padding-top: 80px;
   }
@@ -640,7 +640,7 @@ _:future,
     }
   }
   .section_txt {
-    margin-bottom: 14%;
+    margin-bottom: 3.6vw;
   }
 }
 
@@ -653,9 +653,9 @@ _:future,
     margin-bottom: 60px;
   }
   .section_ttl {
-    margin-top: 4%;
+    margin-top: 5%;
     line-height: 1.7;
-    margin-bottom: 12%;
+    margin-bottom: 3.1vw;
   }
 }
 
