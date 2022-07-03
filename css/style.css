@@ -1605,7 +1605,7 @@ _:future,
 @media (max-width: 767px) {
   #subPage .subPage_intro.row_normal .subPage_intro__img {
     overflow: hidden;
-    margin-right: -20px;
+    right: -20px;
   }
   #subPage .subPage_intro.row_normal .subPage_intro__txt {
     margin-left: initial;

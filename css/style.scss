@@ -1048,9 +1048,6 @@ _:future,
   }
   .section_list {
     font-size: 14px;
-    li {
-      // padding-left: 0.4rem;
-    }
   }
   // desc
   .desc {
@@ -1229,7 +1226,7 @@ _:future,
       &.row_normal {
         .subPage_intro__img {
           overflow: hidden;
-          margin-right: -20px;
+          right: -20px;
         }
         .subPage_intro__txt {
           margin-left: initial;
