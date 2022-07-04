@@ -416,6 +416,9 @@ textarea {
     max-width: 150px;
   }
 }
+.header.sub_header .header__logo img {
+  display: none;
+}
 .header.sub_header .sp_hamburger {
   position: absolute;
   top: 50%;

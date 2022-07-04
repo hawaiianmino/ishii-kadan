@@ -204,6 +204,9 @@
       @include tab {
         max-width: 150px;
       }
+      img {
+        display: none;
+      }
     }
     .sp_hamburger {
       position: absolute;
