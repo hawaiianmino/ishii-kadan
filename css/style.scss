@@ -498,6 +498,9 @@
       height: 1079px;
       width: 100%;
       object-fit: cover;
+      @include ipad {
+        height: 80vh;
+      }
     }
   }
 
@@ -620,6 +623,9 @@ _:future,
     margin-top: 1vw;
     line-height: 1.6;
     margin-bottom: 3.1vw;
+    @include ipad {
+      margin-top: 5%;
+    }
   }
 }
 
@@ -632,15 +638,17 @@ _:future,
   .section_ttl {
     margin-top: 2vw;
     line-height: 1.7;
-    margin-bottom: 18%;
+    margin-bottom: 3.1vw;
     @include ipad {
     margin-top: 5%;
     line-height: 1.6;
-    margin-bottom: 3.1vw;
     }
   }
   .section_txt {
-    margin-bottom: 3.6vw;
+    margin-bottom: 2.1vw;
+    @include ipad {
+      margin-bottom: 3.6vw;
+    }
   }
 }
 

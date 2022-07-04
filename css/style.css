@@ -758,6 +758,11 @@ textarea {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (max-width: 768px) {
+  .fv .swiper-slide img {
+    height: 80vh;
+  }
+}
 .fv__txt {
   position: absolute;
   top: 47%;
@@ -924,6 +929,11 @@ _:future,
   line-height: 1.6;
   margin-bottom: 3.1vw;
 }
+@media (max-width: 768px) {
+  .room .section_ttl {
+    margin-top: 5%;
+  }
+}
 
 .food {
   margin-top: 122px;
@@ -936,17 +946,21 @@ _:future,
 .food .section_ttl {
   margin-top: 2vw;
   line-height: 1.7;
-  margin-bottom: 18%;
+  margin-bottom: 3.1vw;
 }
 @media (max-width: 768px) {
   .food .section_ttl {
     margin-top: 5%;
     line-height: 1.6;
-    margin-bottom: 3.1vw;
   }
 }
 .food .section_txt {
-  margin-bottom: 3.6vw;
+  margin-bottom: 2.1vw;
+}
+@media (max-width: 768px) {
+  .food .section_txt {
+    margin-bottom: 3.6vw;
+  }
 }
 
 .onsen {
