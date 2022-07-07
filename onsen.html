@@ -103,7 +103,7 @@
       <img src="image/close.png" alt="閉じるボタン">
     </div>
     <div class="modal__ttl">宿泊予約</div>
-    <form class="form" action="">
+    <form class="form" action="post">
       <div class="form__item">
         <label for="name">お名前</label>
         <input type="text" id="name" name="name" placeholder="例:石井正悟" required>
@@ -113,20 +113,20 @@
         <input type="email" id="email" name="email" placeholder="例:Example@example.com" required>
       </div>
       <div class="form__item">
-        <label for="paln">ご希望プラン（空いているプランのみ表示されます）</label>
-        <select name="plan" id="plan" placeholder="プランを選択してください">
-          <option value="" disabled selected style="display:none;">選択してください</option>
+        <label for="plan">ご希望プラン（空いているプランのみ表示されます）</label>
+        <select name="plan" id="plan" class="ffM">
+          <option value="placeholder">選択してください</option>
           <option value="">【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
           <option value="">平日に優雅に楽しむ、特別宿泊プラン</option>
           <option value="">絶景貸切露天と個室会席を満喫できるファミリープラン</option>
         </select>
       </div>
       <div class="form__item">
-        <label for="date">日付選択</label>
-        <input type="text" name="datepicker" id="js-datepicker">
+        <label for="js-datepicker">日付選択</label>
+        <input type="text" name="datepicker" id="js-datepicker" placeholder="日時を選択してください">
       </div>
       <div class="form__item taC">
-        <button type="submit" class="form__btn">送信する</button>
+        <button type="submit" class="form__btn ffM">送信する</button>
       </div>
     </form>
   </div>
@@ -192,7 +192,9 @@
           <li><a href="onsen.html">温泉</a></li>
         </ul>
         <div class="footer__logo">
-          <img src="image/footer-logo@2x.png" alt="フッターロゴ">
+          <a href="index.html">
+            <img src="image/footer-logo@2x.png" alt="フッターロゴ">
+          </a>
         </div>
         <div class="footer__address">
           <p><span>〒000-0000</span>山形県鶴岡市xxxxxxxxxxx</p>

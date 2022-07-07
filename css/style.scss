@@ -22,7 +22,7 @@
     white-space: nowrap;
   }
   &.--icon {
-    margin-bottom: 5%;
+    margin-bottom: 4.8%;
     &::before {
       content: '';
       background: url(../image/logo02@2x.png) no-repeat center / contain;
@@ -190,6 +190,9 @@
   right: 0;
   z-index: 800;
   transition: all .3s;
+  img {
+    display: none;
+  }
   &.sub_header {
     position: inherit;
     color: #000;
@@ -203,9 +206,6 @@
       background: url('../image/sub-header-logo@2x.png') no-repeat center / contain;
       @include tab {
         max-width: 150px;
-      }
-      img {
-        display: none;
       }
     }
     .sp_hamburger {
@@ -448,7 +448,15 @@
     padding-top: 35px;
     &__item {
       margin-bottom: 14px;
-    }
+      select { 
+        color: #797878;
+        height: 41px; 
+        border-radius: 0;
+      }
+      option { 
+        color: #000;
+      }
+        }
     &__btn {
       margin: 64px auto 0;
       font-size: 16px;
@@ -509,7 +517,7 @@
 
   &__txt {
     position: absolute;
-    top: 47%;
+    top: 47.2%;
     right: 25%;
     transform: translateY(-50%);
     z-index: 10;
@@ -552,7 +560,7 @@ _:future,
 // lead
 .lead {
   padding-top: 64px;
-  padding-bottom: 86px;
+  padding-bottom: 67px;
   background: url(../image/bg.png) repeat center / cover;
   &__ttl {
     font-size: 28px;
@@ -566,7 +574,7 @@ _:future,
   &__txt {
     writing-mode: vertical-rl;
     text-orientation: upright;
-    margin: 0 23.8% 0 auto;
+    margin: 0 23.7% 0 auto;
     width: 100%;
     max-width: 916px;
     display: flex;
@@ -580,7 +588,7 @@ _:future,
     } 
     .pt_3em {
       padding-top: 5.3em;
-      letter-spacing: .4em;
+      letter-spacing: 6px;
       line-height: 2.4;
       @include tab {
         line-height: 2;
@@ -593,7 +601,7 @@ _:future,
     .shop_name {
       text-align: center;
       font-size: 22px;
-      margin-top: 16.2em;
+      margin-top: 15.3em;
       letter-spacing: .5em;
       @include sp {
         font-size: 20px;
@@ -618,12 +626,12 @@ _:future,
 
 // room
 .room {
-  padding-top: 87px;
+  padding-top: 106px;
   @include tab {
     padding-top: 80px;
   }
   .section_ttl {
-    margin-top: 1vw;
+    margin-top: 1.2vw;
     line-height: 1.6;
     margin-bottom: 3.1vw;
     @include ipad {
@@ -666,14 +674,14 @@ _:future,
   .section_ttl {
     margin-top: 5%;
     line-height: 1.7;
-    margin-bottom: 3.1vw;
+    margin-bottom: 2.8vw;
   }
 }
 
 // plan
 .plan {
   background: url(../image/bg02.png) no-repeat center / cover;
-  padding: 56px 20px 144px 20px;
+  padding: 59px 20px 140px 20px;
   padding-left: calc(50vw - 50%);
   padding-right: calc(50vw - 50%);
   .container {
@@ -686,10 +694,11 @@ _:future,
     display: flex;
     &__ttl {
       font-size: 20px;
-      padding-top: 1.36vw;
-      padding-bottom: 0.77vw;
-      line-height: 1.7;
+      margin-top: 1.36vw;
+      margin-bottom: 1.17vw;
+      line-height: 1.6;
       font-weight: normal;
+      letter-spacing: 0;
     }
     &__item {
       width: 33.3333%;
@@ -747,12 +756,11 @@ _:future,
   .tab {
     display: flex;
     justify-content: space-between;
-    margin: 0 auto 2.15vw;
+    margin: 0 auto 2.25vw;
     li {
       text-align: center;
-      width: calc((100% - 46px) / 2);
+      width: calc((100% - 51px) / 2);
       &:first-child {
-        margin-right: 2.76%;
         text-align: right;
       }
       &:nth-child(2) {
@@ -771,8 +779,8 @@ _:future,
     }
     &__txt {
       time {
-        font-size: 14px;
-        margin-bottom: 10px;
+        font-size: 15px;
+        display: inline-block;
       }
     }
     &__item {
@@ -787,7 +795,7 @@ _:future,
       justify-content: space-between;
       flex-wrap: wrap;
       li {
-        width: calc((100% - 46px) / 2);
+        width: calc((100% - 51px) / 2);
         padding: 15px 10px;
         background-color: #f6f6f6;
         .d-flex {
@@ -883,11 +891,9 @@ _:future,
     }
   }
   &__txt {
-    line-height: 2em;
-    width: calc((447 / 1180) * 100%);
-    p:first-child {
-      margin-top: -1vw;
-    }
+    line-height: 1.9em;
+    width: 37.4%;
+    letter-spacing: 0;
     p:not(:last-child) {
       margin-bottom: 0.3vw;
     }
@@ -898,11 +904,17 @@ _:future,
       width: 100%;
     }
   }
+  &__item {
+    margin-top: 0.6vw;
+    &:last-child {
+      line-height: 2.1;
+    }
+  }
   &__wrap {
     display: flex;
     margin-bottom: 3.5vw;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
   &__map {
     text-align: center;
@@ -934,6 +946,9 @@ _:future,
     &__wrap {
       flex-direction: column;
     }
+    &__item {
+      margin-top: 15px;
+    }
   }
 }
 
@@ -944,7 +959,7 @@ _:future,
     padding-right: calc(50vw - 50%);
     text-align: center;
     .container {
-      padding: 64px 0 61px;
+      padding: 64px 0 56px;
     }
     &__menu {
       margin: 0 auto 4.2vw;
@@ -972,6 +987,15 @@ _:future,
       }
       p {
         letter-spacing: .1em;
+        &:nth-child(2) {
+          display: flex;
+          justify-content: space-between;
+          max-width: 320px;
+          margin: 0 auto;
+          span {
+            margin-right: 0;
+          }
+        }
       }
       span {
         letter-spacing: 0;

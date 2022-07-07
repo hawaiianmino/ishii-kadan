@@ -89,6 +89,17 @@ $(function() {
     }
   });
 
+  // オプションの最初の選択肢をグレーに
+  $(function(){
+    $('select').on('change', function(){
+        if($(this).val() == "placeholder"){
+            $(this).css('color','#797878')
+        } else {
+            $(this).css('color','#000')
+        }
+    });
+  });
+
   $(window).scroll(function() {
     stickyHeader();
   })
@@ -97,7 +108,7 @@ $(function() {
     locale     : 'ja',
     dateFormat : 'Y.m.d（D）', 
     minDate: "today",
-    mode: 'multiple',
+    mode: 'range',
     static: true
   });
 
