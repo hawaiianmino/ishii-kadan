@@ -184,6 +184,27 @@
   <!-- <script src="js/swiper/swiper-bundle.min.js.map"></script> -->
   <script src="js/swiper/swiper-bundle.min.js"></script>
   <!-- JS -->
+  <!-- パンくずの構造化マークアップ -->
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "HOME",
+          "item": "https://hawaiianmino.github.io/ishii-kadan/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "温泉",
+          "item": "https://hawaiianmino.github.io/ishii-kadan/onsen.html"
+        }
+      ]
+    }
+    </script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
