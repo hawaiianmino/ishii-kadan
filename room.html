@@ -20,34 +20,6 @@
     <link rel="shortcut icon" sizes="192x192" href="">
     <meta name="last-modified" content="Sun, 29 Dec 2019 20:30:30 GMT">
 
-    <!-- パンくず対応 -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "TOP",
-            "item": "https://smple.com/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "トップス",
-            "item": "https://smple.com/tops/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Tシャツ",
-            "item": "https://smple.com/tops/tshirt/"
-          }
-        ]
-      }
-      </script>
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="css/swiper/swiper-bundle.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -223,6 +195,27 @@
   <!-- <script src="js/swiper/swiper-bundle.min.js.map"></script> -->
   <script src="js/swiper/swiper-bundle.min.js"></script>
   <!-- JS -->
+  <!-- パンくずの構造化マークアップ -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://hawaiianmino.github.io/ishii-kadan/",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "HOME",
+          "item": "https://hawaiianmino.github.io/ishii-kadan/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "お部屋について",
+          "item": "https://hawaiianmino.github.io/ishii-kadan/room.html"
+        }
+      ]
+    }
+    </script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
