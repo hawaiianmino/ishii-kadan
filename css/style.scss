@@ -448,8 +448,11 @@
     padding-top: 35px;
     &__item {
       margin-bottom: 14px;
+      input {
+        border-radius: 0;
+      }
       select { 
-        color: #797878;
+        color: #757575;
         height: 41px; 
         border-radius: 0;
       }

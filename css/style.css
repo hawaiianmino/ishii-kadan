@@ -696,8 +696,11 @@ textarea {
 .modal .form__item {
   margin-bottom: 14px;
 }
+.modal .form__item input {
+  border-radius: 0;
+}
 .modal .form__item select {
-  color: #797878;
+  color: #757575;
   height: 41px;
   border-radius: 0;
 }

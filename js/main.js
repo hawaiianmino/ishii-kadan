@@ -93,7 +93,7 @@ $(function() {
   $(function(){
     $('select').on('change', function(){
         if($(this).val() == "placeholder"){
-            $(this).css('color','#797878')
+            $(this).css('color','#757575')
         } else {
             $(this).css('color','#000')
         }
